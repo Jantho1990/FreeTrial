@@ -29,6 +29,14 @@ export default {
 
 <style lang="scss" scoped>
 .free-trial-app {
+    max-width: 400px;
+    margin: auto;
+    box-shadow: -2px -2px 10px #777;
+    border-radius: 5px;
+    padding: 3rem;
     
+    .btn {
+        color: hsl(353.1, 87%, 66.9%);
+    }
 }
 </style>

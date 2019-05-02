@@ -10662,11 +10662,10 @@ a.text-dark:focus {
   }
 }
 
-/* .btn {
-    padding: 0.25rem 0.5rem;
-    background-color: pink;
-    color: white;
-} */
+.btn {
+  background-color: #f46172;
+  color: white;
+}
 
 header.header {
   border-top: 10px solid purple;
@@ -10716,12 +10715,18 @@ header.header nav > ul > li {
   margin: 0 1rem;
 }
 
+body {
+  font-family: "Arial", sans-serif;
+}
+
 .free-trial {
   text-align: center;
 }
 
 .free-trial h1 {
-  font-family: serif;
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  color: #2a0054;
 }
 
 .navbar-laravel {
