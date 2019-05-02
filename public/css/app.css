@@ -10662,11 +10662,11 @@ a.text-dark:focus {
   }
 }
 
-.btn {
-  padding: 0.25rem 0.5rem;
-  background-color: pink;
-  color: white;
-}
+/* .btn {
+    padding: 0.25rem 0.5rem;
+    background-color: pink;
+    color: white;
+} */
 
 header.header {
   border-top: 10px solid purple;
@@ -10691,12 +10691,21 @@ header.header .upper > * {
   margin: 0 1rem;
 }
 
+header.header .upper .btn {
+  background-color: pink;
+  color: white;
+}
+
 header.header .lower,
 header.header nav > ul {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+}
+
+header.header .lower .dropdown-toggle::after {
+  display: none;
 }
 
 header.header nav > ul {

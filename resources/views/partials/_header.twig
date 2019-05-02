@@ -7,12 +7,17 @@
             <a href="#" class="btn">Join Now</a>
         </div>
         <div class="lower">
-            <div class="search-bar">
-                <span class="filter-select">
-                    All
-                    <span class="chevron">&#x2304;</span>
-                </span>
-                <input type="text" name="searchbar" id="searchbar">
+            <div class="search-bar input-group">
+                <div class="input-group-prepend">
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="#">Option 1</a>
+                    </div>
+                </div>
+                <div class="input-group-prepend">
+                    <i class="input-group-text fas fa-search"></i>
+                </div>
+                <input type="text" class="form-control" name="searchbar" id="searchbar">
             </div>
             <nav>
                 <ul>

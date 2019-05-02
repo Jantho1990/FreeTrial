@@ -16,6 +16,10 @@ header.header {
         > * {
             margin: 0 1rem;
         }
+        .btn {
+            background-color: pink;
+            color: white;
+        }
     }
 
     .lower, nav > ul {
@@ -23,6 +27,12 @@ header.header {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
+    }
+
+    .lower {
+        .dropdown-toggle::after {
+            display: none;
+        }
     }
 
     nav > ul {

@@ -70,7 +70,7 @@ The `README` file will contain an outline of the database schema.
 
 As mentioned previously, we will be using Twig templates to construct our page. The page design for desktop will match the provided mock design. We will use this as the base for styling the page responsively so that it will be presentable at tablet and mobile sizes.
 
-SASS will be used to style the page. No other styling frameworks, such as Bootstrap or Bulma, will be used.
+SASS will be used to style the page. To speed up development of the prototype, Bootstrap will also be used for default styling needs.
 
 The form itself will be built as a Vue application consisting of three components:
 
