@@ -6313,7 +6313,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}", ""]);
+exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}", ""]);
 
 // exports
 

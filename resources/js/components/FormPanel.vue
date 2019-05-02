@@ -17,6 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .form-panel {
+    color: hsl(210, 6.7%, 23.5%);
     .benefits {
         list-style-image: url('/img/checkmark-lined.svg');
     }
