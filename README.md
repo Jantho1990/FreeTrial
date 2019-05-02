@@ -8,3 +8,13 @@ This project was built using Laravel Homestead to stage the environment. If you 
 
 > If you run into an issue with PHP on Homestead, try configuring Homestead to use PHP 7.2 instead of 7.3 (as per https://github.com/laravel/homestead/issues/1031).
 
+## Database Schema
+The default Laravel user migration was used to generate the schema.
+- id: bigInt
+- name: varchar
+- email: varchar, unique
+- email_verified_at: timestamp, nullable
+- password: varchar
+- remember_token: varchar, 100
+- created_at: timestamp, nullable
+- updated_at: timestamp, nullable
