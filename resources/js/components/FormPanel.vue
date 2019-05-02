@@ -8,6 +8,7 @@
         </ul>
         <input type="text" class="form-control" placeholder="Enter Your Email Address" v-model="emailValue">
         <button class="btn" @click="sendVerificationRequest">Start Your Free Trial</button>
+        <p class="disclaimer">The free trial is for new members only. All assets downloaded during the free trial period are covered by a basic license.</p>
     </div>
 </template>
 
@@ -43,6 +44,10 @@ export default {
         text-transform: uppercase;
         font-weight: bold;
         padding: 0.5rem 0.75rem;
+        margin-top: 1rem;
+    }
+    .disclaimer {
+        font-size: 0.6rem;
         margin-top: 1rem;
     }
 }
