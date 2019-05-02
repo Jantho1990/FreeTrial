@@ -17,8 +17,8 @@ class FreeTrialController extends Controller
     /**
      * API Endpoint to check if user email exists in our DB.
      */
-    public function verifyUserExists()
+    public function verifyUserExists(Request $request)
     {
-        // TODO: Write API endpoint
+        return 'hit';
     }
 }

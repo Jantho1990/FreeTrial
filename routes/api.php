@@ -13,6 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::middleware('throttle:30,1')->post('/free-trial-submit', 'FreeTrialController@verifyUserExists');

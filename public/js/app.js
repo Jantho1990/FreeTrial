@@ -1851,13 +1851,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      isExistingCustomer: false
+      isExistingCustomer: false,
+      apiEndpoint: '/api/free-trial-submit'
     };
   },
   methods: {
     verifyIsNotCustomer: function verifyIsNotCustomer(data) {
       console.log('hit', data);
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/free-trial-submit', data).then(function (_ref) {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(this.apiEndpoint, data).then(function (_ref) {
         var data = _ref.data;
       })["catch"](function (error) {
         console.log('ERROR', error);

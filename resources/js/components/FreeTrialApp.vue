@@ -22,13 +22,14 @@ export default {
     },
     data () {
         return {
-            isExistingCustomer: false
+            isExistingCustomer: false,
+            apiEndpoint: '/api/free-trial-submit'
         }
     },
     methods: {
         verifyIsNotCustomer (data) {
             console.log('hit', data)
-            axios.post('/free-trial-submit', data)
+            axios.post(this.apiEndpoint, data)
                 .then(({ data }) => {
 
                 }).catch(error => {

@@ -39,7 +39,7 @@ Two routes will be used:
 - `free-trial`, which returns the `free-trial` Blade view containing our landing page.
   - The url will be `/free-trial`.
 - `free-trial-user-exists`, an AJAX endpoint which will return whether the submitted email is associated with a user in our database.
-  - The url will be `/free-trial-submit`.
+  - The url will be `/api/free-trial-submit`.
     - We will not use `/free-trial-user-exists`, as that would simply make it immediately obvious to a potential bad actor what this endpoint is doing.
   - The response from this endpoint will be a simple boolean: `false` if the user doesn't exist, `true` if they do.
   - The endpoint will also be responsible for applying rate throttling measures to prevent bots from flooding submissions to our endpoint. This both reduces spam and prevents scraping user emails by detecting negatory return values.
