@@ -1879,9 +1879,14 @@ __webpack_require__.r(__webpack_exports__);
 
       var api = this.apiEndpoint;
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(api, data).then(function (_ref) {
-        var data = _ref.data;
+        var response = _ref.data.response;
         _this.error = false;
-        alert('success');
+
+        if (!response) {
+          alert('accepted!');
+        } else {
+          _this.isExistingCustomer = true;
+        }
       })["catch"](function (error) {
         if (error.response) {
           _this.error = true;

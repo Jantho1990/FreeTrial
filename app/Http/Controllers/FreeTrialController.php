@@ -24,7 +24,12 @@ class FreeTrialController extends Controller
             'email' => 'required|email'
         ]);
 
-        return $data;
-        // return User::where('email', $request->email);
+        // We are obfuscating the purpose of this endpoint by
+        // returning whether the user exists, rather than whether
+        // the submission succeeded. Hopefully this will deter
+        // some potential bad actors.
+        return User::where('email', $data['email'])->count() > 0
+            ? [ 'response' => true ]
+            : [ 'response' => false ];
     }
 }

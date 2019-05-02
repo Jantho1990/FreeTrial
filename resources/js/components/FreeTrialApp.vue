@@ -36,9 +36,14 @@ export default {
             const { apiEndpoint: api } = this
             
             axios.post(api, data)
-                .then(({ data }) => {
+                .then(({ data: { response } }) => {
                     this.error = false
-                    alert('success')
+                
+                    if (!response) {
+                        alert('accepted!')
+                    } else {
+                        this.isExistingCustomer = true
+                    }
                 }).catch(error => {
                     if (error.response) {
                         this.error = true
