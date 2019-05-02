@@ -1,26 +1,31 @@
 <template>
     <div class="free-trial-app">
-        <h2>Get <strong>3 free downloads</strong> when you start your free trial today.</h2>
-        <ul class="benefits">
-            <li>Get access to our full Pro catalog</li>
-            <li>Cancel anytime, risk free</li>
-            <li>7 days free</li>
-        </ul>
+        <component :is="currentPanel"></component>
     </div>
 </template>
 
 <script>
+import FormPanel from './FormPanel'
 export default {
-    name: "FreeTrialApp"
+    name: "FreeTrialApp",
+    components: {
+        FormPanel
+    },
+    computed: {
+        currentPanel () {
+            return this.isExistingCustomer ? null : 'FormPanel'
+        }
+    },
+    data () {
+        return {
+            isExistingCustomer: false
+        }
+    }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .free-trial-app {
-    .benefits {
-        list-style-image: url('/img/checkmark-lined.svg');
-        li {
-        }
-    }
+    
 }
 </style>
