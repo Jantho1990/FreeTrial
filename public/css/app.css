@@ -10662,6 +10662,51 @@ a.text-dark:focus {
   }
 }
 
+.btn {
+  padding: 0.25rem 0.5rem;
+  background-color: pink;
+  color: white;
+}
+
+header.header {
+  border-top: 10px solid purple;
+}
+
+header.header .header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+header.header .upper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header.header .upper > * {
+  margin: 0 1rem;
+}
+
+header.header .lower,
+header.header nav > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header.header nav > ul {
+  list-style: none;
+}
+
+header.header nav > ul > li {
+  margin: 0 1rem;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

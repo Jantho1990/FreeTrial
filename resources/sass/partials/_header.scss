@@ -1,0 +1,34 @@
+header.header {
+    border-top: 10px solid purple;
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+
+    .upper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        > * {
+            margin: 0 1rem;
+        }
+    }
+
+    .lower, nav > ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    nav > ul {
+        list-style: none;
+        > li {
+            margin: 0 1rem;
+        }
+    }
+}
