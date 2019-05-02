@@ -1,5 +1,8 @@
 header.header {
     border-top: 10px solid purple;
+    a {
+        color: $light-gray;
+    }
     .header-content {
         display: flex;
         flex-direction: column;
@@ -27,6 +30,9 @@ header.header {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
+        .btn {
+            background-color: hsl(0, 0%, 100%);
+        }
     }
 
     .lower {

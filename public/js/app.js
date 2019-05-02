@@ -1794,7 +1794,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'FormPanel',
+  data: function data() {
+    return {
+      emailValue: ''
+    };
+  }
+});
 
 /***/ }),
 
@@ -6294,7 +6303,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".existing-user-panel .btn[data-v-1a6fdc5a] {\n  background-color: #f46172;\n  color: white;\n  width: 100%;\n}", ""]);
+exports.push([module.i, ".existing-user-panel .btn[data-v-1a6fdc5a] {\n  width: 100%;\n}", ""]);
 
 // exports
 
@@ -6313,7 +6322,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}", ""]);
+exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}\n.form-panel input[type=text][data-v-07af7c76] {\n  padding: 1.25rem 0.75rem;\n  text-transform: capitalize;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.5rem 0.75rem;\n  margin-top: 1rem;\n}", ""]);
 
 // exports
 
@@ -6332,7 +6341,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".free-trial-app[data-v-8034bbbc] {\n  max-width: 400px;\n  margin: auto;\n  box-shadow: -2px -2px 10px #777;\n  border-radius: 5px;\n  padding: 3rem;\n}\n.free-trial-app .btn[data-v-8034bbbc] {\n  color: #f46172;\n}", ""]);
+exports.push([module.i, ".free-trial-app[data-v-8034bbbc] {\n  max-width: 400px;\n  margin: auto;\n  box-shadow: -2px -2px 10px #777;\n  border-radius: 5px;\n  padding: 3rem;\n}", ""]);
 
 // exports
 
@@ -37920,27 +37929,57 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "form-panel" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.emailValue,
+          expression: "emailValue"
+        }
+      ],
+      staticClass: "form-control",
+      attrs: { type: "text", placeholder: "Enter your email address" },
+      domProps: { value: _vm.emailValue },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.emailValue = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("button", { staticClass: "btn" }, [_vm._v("Start Your Free Trial")])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-panel" }, [
-      _c("h2", [
-        _vm._v("Get "),
-        _c("strong", [_vm._v("3 free downloads")]),
-        _vm._v(" when you start your free trial today.")
-      ]),
+    return _c("h2", [
+      _vm._v("Get "),
+      _c("strong", [_vm._v("3 free downloads")]),
+      _vm._v(" when you start your free trial today.")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "benefits" }, [
+      _c("li", [_vm._v("Get access to our full Pro catalog")]),
       _vm._v(" "),
-      _c("ul", { staticClass: "benefits" }, [
-        _c("li", [_vm._v("Get access to our full Pro catalog")]),
-        _vm._v(" "),
-        _c("li", [_vm._v("Cancel anytime, risk free")]),
-        _vm._v(" "),
-        _c("li", [_vm._v("7 days free")])
-      ])
+      _c("li", [_vm._v("Cancel anytime, risk free")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("7 days free")])
     ])
   }
 ]

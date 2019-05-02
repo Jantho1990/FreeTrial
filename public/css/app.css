@@ -10671,6 +10671,10 @@ header.header {
   border-top: 10px solid purple;
 }
 
+header.header a {
+  color: #737984;
+}
+
 header.header .header-content {
   display: flex;
   flex-direction: column;
@@ -10701,6 +10705,11 @@ header.header nav > ul {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+}
+
+header.header .lower .btn,
+header.header nav > ul .btn {
+  background-color: white;
 }
 
 header.header .lower .dropdown-toggle::after {
