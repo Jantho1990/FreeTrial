@@ -15,3 +15,7 @@ Route::get('/', function () {
     $usingTwig = true;
     return view('welcome', compact('usingTwig'));
 });
+
+Route::get('/free-trial', function () {
+    return view('pages.free-trial');
+});
