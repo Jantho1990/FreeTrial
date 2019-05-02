@@ -28,11 +28,12 @@ export default {
     methods: {
         verifyIsNotCustomer (data) {
             console.log('hit', data)
-            return
-            /* axios.post('/free-trial-submit', data)
-                .then({ data } => {
+            axios.post('/free-trial-submit', data)
+                .then(({ data }) => {
 
-                }) */
+                }).catch(error => {
+                    console.log('ERROR', error)
+                })
         }
     }
 }

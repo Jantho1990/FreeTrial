@@ -1796,6 +1796,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'FormPanel',
   data: function data() {
@@ -1856,10 +1857,11 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     verifyIsNotCustomer: function verifyIsNotCustomer(data) {
       console.log('hit', data);
-      return;
-      /* axios.post('/free-trial-submit', data)
-          .then({ data } => {
-           }) */
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/free-trial-submit', data).then(function (_ref) {
+        var data = _ref.data;
+      })["catch"](function (error) {
+        console.log('ERROR', error);
+      });
     }
   }
 });
@@ -6342,7 +6344,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}\n.form-panel input[type=text][data-v-07af7c76] {\n  padding: 1.25rem 0.75rem;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.5rem 0.75rem;\n  margin-top: 1rem;\n}", ""]);
+exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}\n.form-panel input[type=text][data-v-07af7c76] {\n  padding: 1.25rem 0.75rem;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.5rem 0.75rem;\n  margin-top: 1rem;\n}\n.form-panel .disclaimer[data-v-07af7c76] {\n  font-size: 0.6rem;\n  margin-top: 1rem;\n}", ""]);
 
 // exports
 
@@ -37980,7 +37982,13 @@ var render = function() {
       "button",
       { staticClass: "btn", on: { click: _vm.sendVerificationRequest } },
       [_vm._v("Start Your Free Trial")]
-    )
+    ),
+    _vm._v(" "),
+    _c("p", { staticClass: "disclaimer" }, [
+      _vm._v(
+        "The free trial is for new members only. All assets downloaded during the free trial period are covered by a basic license."
+      )
+    ])
   ])
 }
 var staticRenderFns = [
