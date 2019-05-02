@@ -1797,6 +1797,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'FormPanel',
   data: function data() {
@@ -1810,6 +1817,12 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('form-submit', {
         email: email
       });
+    }
+  },
+  props: {
+    'error': {
+      type: Boolean,
+      "default": false
     }
   }
 });
@@ -1835,6 +1848,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -1852,16 +1869,23 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       isExistingCustomer: false,
-      apiEndpoint: '/api/free-trial-submit'
+      apiEndpoint: '/api/free-trial-submit',
+      error: false
     };
   },
   methods: {
     verifyIsNotCustomer: function verifyIsNotCustomer(data) {
+      var _this = this;
+
       var api = this.apiEndpoint;
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(api, data).then(function (_ref) {
         var data = _ref.data;
+        _this.error = false;
+        alert('success');
       })["catch"](function (error) {
-        console.log('ERROR', error);
+        if (error.response) {
+          _this.error = true;
+        }
       });
     }
   }
@@ -6345,7 +6369,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}\n.form-panel input[type=text][data-v-07af7c76] {\n  padding: 1.25rem 0.75rem;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.5rem 0.75rem;\n  margin-top: 1rem;\n}\n.form-panel .disclaimer[data-v-07af7c76] {\n  font-size: 0.6rem;\n  margin-top: 1rem;\n}", ""]);
+exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}\n.form-panel input[type=text][data-v-07af7c76] {\n  padding: 1.25rem 0.75rem;\n}\n.form-panel input[type=text].error[data-v-07af7c76] {\n  border: 1px solid #bf4040;\n  box-shadow: 0px 0px 5px #bf4040;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.5rem 0.75rem;\n  margin-top: 1rem;\n}\n.form-panel .error-msg[data-v-07af7c76] {\n  font-size: 0.6rem;\n  color: #bf4040;\n  text-align: left;\n  margin-top: 0.5rem;\n  padding-left: 0.5rem;\n}\n.form-panel .disclaimer[data-v-07af7c76] {\n  font-size: 0.6rem;\n  margin-top: 1rem;\n}", ""]);
 
 // exports
 
@@ -37967,6 +37991,7 @@ var render = function() {
         }
       ],
       staticClass: "form-control",
+      class: { error: _vm.error },
       attrs: { type: "text", placeholder: "Enter Your Email Address" },
       domProps: { value: _vm.emailValue },
       on: {
@@ -37978,6 +38003,14 @@ var render = function() {
         }
       }
     }),
+    _vm._v(" "),
+    _vm.error
+      ? _c("p", { staticClass: "error-msg" }, [
+          _vm._v(
+            "There was an error with your submission. Please verify that you typed in your email address correctly."
+          )
+        ])
+      : _vm._e(),
     _vm._v(" "),
     _c(
       "button",
@@ -38043,6 +38076,7 @@ var render = function() {
     [
       _c(_vm.currentPanel, {
         tag: "component",
+        attrs: { error: _vm.error },
         on: { "form-submit": _vm.verifyIsNotCustomer }
       })
     ],

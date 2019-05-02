@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class FreeTrialController extends Controller
 {
@@ -19,6 +20,11 @@ class FreeTrialController extends Controller
      */
     public function verifyUserExists(Request $request)
     {
-        return 'hit';
+        $data = $request->validate([
+            'email' => 'required|email'
+        ]);
+
+        return $data;
+        // return User::where('email', $request->email);
     }
 }

@@ -1,6 +1,10 @@
 <template>
     <div class="free-trial-app">
-        <component :is="currentPanel" @form-submit="verifyIsNotCustomer"></component>
+        <component
+            :error="error"
+            :is="currentPanel"
+            @form-submit="verifyIsNotCustomer"
+        ></component>
     </div>
 </template>
 
@@ -23,7 +27,8 @@ export default {
     data () {
         return {
             isExistingCustomer: false,
-            apiEndpoint: '/api/free-trial-submit'
+            apiEndpoint: '/api/free-trial-submit',
+            error: false
         }
     },
     methods: {
@@ -32,9 +37,12 @@ export default {
             
             axios.post(api, data)
                 .then(({ data }) => {
-
+                    this.error = false
+                    alert('success')
                 }).catch(error => {
-                    console.log('ERROR', error)
+                    if (error.response) {
+                        this.error = true
+                    }
                 })
         }
     }

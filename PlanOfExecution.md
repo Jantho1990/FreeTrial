@@ -76,6 +76,7 @@ The form itself will be built as a Vue application consisting of three component
 
 - `FreeTrialApp`, the main application component, which will contain two primary components: `FormPanel` and `ExistingUserPanel`.
   - This will also contain the logic for submitting the AJAX request, triggered by a child event (see `FormPanel`).
+  - If the user submits an email that Laravel's validation considers invalid, the panel will communicate this to `FormPanel` so it can display a helpful error message.
   - In the event that the form submission returns `false` (the user does not exist), `FreeTrialApp` will initiate URL navigation to the following URL: https://pro.creativemarket.com/sign-up
 - `FormPanel` will contain our marketing copy, as shown in the mock, and an email submission form. When the form is submitted, the default submission will be prevented, and the component will emit a `form-submitted` event that the `FreeTrialApp` component is listening for.
 - `ExistingUserPanel` is what `FreeTrialApp` will show if the AJAX request returns `true` (the user does exist). It simply consists of some text and a button link to our catalog.

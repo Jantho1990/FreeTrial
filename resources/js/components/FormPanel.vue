@@ -6,7 +6,14 @@
             <li>Cancel anytime, risk free</li>
             <li>7 days free</li>
         </ul>
-        <input type="text" class="form-control" placeholder="Enter Your Email Address" v-model="emailValue">
+        <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Your Email Address"
+            v-model="emailValue"
+            :class="{ error: error }"
+        >
+        <p class="error-msg" v-if="error">There was an error with your submission. Please verify that you typed in your email address correctly.</p>
         <button class="btn" @click="sendVerificationRequest">Start Your Free Trial</button>
         <p class="disclaimer">The free trial is for new members only. All assets downloaded during the free trial period are covered by a basic license.</p>
     </div>
@@ -26,6 +33,12 @@ export default {
             const { emailValue: email } = this
             this.$emit('form-submit', { email })
         }
+    },
+    props: {
+        'error': {
+            type: Boolean,
+            default: false
+        }
     }
 }
 </script>
@@ -33,12 +46,20 @@ export default {
 <style lang="scss" scoped>
 .form-panel {
     color: hsl(210, 6.7%, 23.5%);
+    
     .benefits {
         list-style-image: url('/img/checkmark-lined.svg');
     }
+
     input[type="text"] {
         padding: 1.25rem 0.75rem;
+        
+        &.error {
+            border: 1px solid hsl(0, 50%, 50%);
+            box-shadow: 0px 0px 5px hsl(0, 50%, 50%);
+        }
     }
+
     .btn {
         width: 100%;
         text-transform: uppercase;
@@ -46,6 +67,15 @@ export default {
         padding: 0.5rem 0.75rem;
         margin-top: 1rem;
     }
+
+    .error-msg {
+        font-size: 0.6rem;
+        color: hsl(0, 50%, 50%);
+        text-align: left;
+        margin-top: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
     .disclaimer {
         font-size: 0.6rem;
         margin-top: 1rem;
