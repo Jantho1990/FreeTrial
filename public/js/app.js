@@ -1870,20 +1870,22 @@ __webpack_require__.r(__webpack_exports__);
     return {
       isExistingCustomer: false,
       apiEndpoint: '/api/free-trial-submit',
-      error: false
+      error: false,
+      signupUrl: 'https://pro.creativemarket.com/sign-up'
     };
   },
   methods: {
     verifyIsNotCustomer: function verifyIsNotCustomer(data) {
       var _this = this;
 
-      var api = this.apiEndpoint;
+      var api = this.apiEndpoint,
+          signup = this.signupUrl;
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(api, data).then(function (_ref) {
         var response = _ref.data.response;
         _this.error = false;
 
         if (!response) {
-          alert('accepted!');
+          window.location.href = signup;
         } else {
           _this.isExistingCustomer = true;
         }

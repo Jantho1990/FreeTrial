@@ -28,19 +28,23 @@ export default {
         return {
             isExistingCustomer: false,
             apiEndpoint: '/api/free-trial-submit',
-            error: false
+            error: false,
+            signupUrl: 'https://pro.creativemarket.com/sign-up'
         }
     },
     methods: {
         verifyIsNotCustomer (data) {
-            const { apiEndpoint: api } = this
+            const {
+                apiEndpoint: api,
+                signupUrl: signup
+            } = this
             
             axios.post(api, data)
                 .then(({ data: { response } }) => {
                     this.error = false
                 
                     if (!response) {
-                        alert('accepted!')
+                        window.location.href = signup
                     } else {
                         this.isExistingCustomer = true
                     }
