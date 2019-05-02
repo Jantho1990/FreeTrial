@@ -6,14 +6,17 @@
 
 <script>
 import FormPanel from './FormPanel'
+import ExistingCustomerPanel from './ExistingUserPanel'
+
 export default {
     name: "FreeTrialApp",
     components: {
-        FormPanel
+        FormPanel,
+        ExistingCustomerPanel
     },
     computed: {
         currentPanel () {
-            return this.isExistingCustomer ? null : 'FormPanel'
+            return this.isExistingCustomer ? 'ExistingCustomerPanel' : 'FormPanel'
         }
     },
     data () {
