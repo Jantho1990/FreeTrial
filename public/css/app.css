@@ -10716,6 +10716,14 @@ header.header nav > ul > li {
   margin: 0 1rem;
 }
 
+.free-trial {
+  text-align: center;
+}
+
+.free-trial h1 {
+  font-family: serif;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
