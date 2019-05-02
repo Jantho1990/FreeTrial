@@ -11,12 +11,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .existing-user-panel {
     .btn {
-        color: hsl(353.1, 87%, 66.9%);
+        background-color: hsl(353.1, 87%, 66.9%);
+        color: hsl(0, 0%, 100%);
         width: 100%;
-        display: inline-block;
     }
 }
 </style>
