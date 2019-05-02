@@ -1,12 +1,13 @@
 <template>
     <div class="free-trial-app">
-        <component :is="currentPanel"></component>
+        <component :is="currentPanel" @form-submit="verifyIsNotCustomer"></component>
     </div>
 </template>
 
 <script>
 import FormPanel from './FormPanel'
 import ExistingCustomerPanel from './ExistingUserPanel'
+import axios from 'axios'
 
 export default {
     name: "FreeTrialApp",
@@ -22,6 +23,16 @@ export default {
     data () {
         return {
             isExistingCustomer: false
+        }
+    },
+    methods: {
+        verifyIsNotCustomer (data) {
+            console.log('hit', data)
+            return
+            /* axios.post('/free-trial-submit', data)
+                .then({ data } => {
+
+                }) */
         }
     }
 }

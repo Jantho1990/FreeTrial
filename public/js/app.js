@@ -1802,6 +1802,14 @@ __webpack_require__.r(__webpack_exports__);
     return {
       emailValue: ''
     };
+  },
+  methods: {
+    sendVerificationRequest: function sendVerificationRequest() {
+      var email = this.emailValue;
+      this.$emit('form-submit', {
+        email: email
+      });
+    }
   }
 });
 
@@ -1818,12 +1826,15 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FormPanel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormPanel */ "./resources/js/components/FormPanel.vue");
 /* harmony import */ var _ExistingUserPanel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExistingUserPanel */ "./resources/js/components/ExistingUserPanel.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
 //
 //
 //
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1841,6 +1852,15 @@ __webpack_require__.r(__webpack_exports__);
     return {
       isExistingCustomer: false
     };
+  },
+  methods: {
+    verifyIsNotCustomer: function verifyIsNotCustomer(data) {
+      console.log('hit', data);
+      return;
+      /* axios.post('/free-trial-submit', data)
+          .then({ data } => {
+           }) */
+    }
   }
 });
 
@@ -6322,7 +6342,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}\n.form-panel input[type=text][data-v-07af7c76] {\n  padding: 1.25rem 0.75rem;\n  text-transform: capitalize;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.5rem 0.75rem;\n  margin-top: 1rem;\n}", ""]);
+exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style-image: url(\"/img/checkmark-lined.svg\");\n}\n.form-panel input[type=text][data-v-07af7c76] {\n  padding: 1.25rem 0.75rem;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.5rem 0.75rem;\n  margin-top: 1rem;\n}", ""]);
 
 // exports
 
@@ -37944,7 +37964,7 @@ var render = function() {
         }
       ],
       staticClass: "form-control",
-      attrs: { type: "text", placeholder: "Enter your email address" },
+      attrs: { type: "text", placeholder: "Enter Your Email Address" },
       domProps: { value: _vm.emailValue },
       on: {
         input: function($event) {
@@ -37956,7 +37976,11 @@ var render = function() {
       }
     }),
     _vm._v(" "),
-    _c("button", { staticClass: "btn" }, [_vm._v("Start Your Free Trial")])
+    _c(
+      "button",
+      { staticClass: "btn", on: { click: _vm.sendVerificationRequest } },
+      [_vm._v("Start Your Free Trial")]
+    )
   ])
 }
 var staticRenderFns = [
@@ -38007,7 +38031,12 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "free-trial-app" },
-    [_c(_vm.currentPanel, { tag: "component" })],
+    [
+      _c(_vm.currentPanel, {
+        tag: "component",
+        on: { "form-submit": _vm.verifyIsNotCustomer }
+      })
+    ],
     1
   )
 }

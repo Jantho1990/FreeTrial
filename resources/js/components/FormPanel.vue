@@ -6,17 +6,24 @@
             <li>Cancel anytime, risk free</li>
             <li>7 days free</li>
         </ul>
-        <input type="text" class="form-control" placeholder="Enter your email address" v-model="emailValue">
-        <button class="btn">Start Your Free Trial</button>
+        <input type="text" class="form-control" placeholder="Enter Your Email Address" v-model="emailValue">
+        <button class="btn" @click="sendVerificationRequest">Start Your Free Trial</button>
     </div>
 </template>
 
 <script>
+
 export default {
     name: 'FormPanel',
     data () {
         return {
             emailValue: ''
+        }
+    },
+    methods: {
+        sendVerificationRequest () {
+            const { emailValue: email } = this
+            this.$emit('form-submit', { email })
         }
     }
 }
@@ -30,7 +37,6 @@ export default {
     }
     input[type="text"] {
         padding: 1.25rem 0.75rem;
-        text-transform: capitalize;
     }
     .btn {
         width: 100%;
