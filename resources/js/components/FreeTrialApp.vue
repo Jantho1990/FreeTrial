@@ -28,8 +28,9 @@ export default {
     },
     methods: {
         verifyIsNotCustomer (data) {
-            console.log('hit', data)
-            axios.post(this.apiEndpoint, data)
+            const { apiEndpoint: api } = this
+            
+            axios.post(api, data)
                 .then(({ data }) => {
 
                 }).catch(error => {

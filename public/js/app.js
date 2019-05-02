@@ -1857,8 +1857,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     verifyIsNotCustomer: function verifyIsNotCustomer(data) {
-      console.log('hit', data);
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(this.apiEndpoint, data).then(function (_ref) {
+      var api = this.apiEndpoint;
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post(api, data).then(function (_ref) {
         var data = _ref.data;
       })["catch"](function (error) {
         console.log('ERROR', error);
