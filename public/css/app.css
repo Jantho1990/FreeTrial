@@ -10705,8 +10705,51 @@ header.header .upper > * {
   margin: 0 1rem;
 }
 
+@media (max-width: 991.98px) {
+  header.header .upper > * {
+    margin: 0 0.25rem;
+  }
+}
+
+header.header .upper a {
+  font-weight: bold;
+}
+
 header.header .upper .btn {
   color: white;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+@media (max-width: 991.98px) {
+  header.header .upper .pricing {
+    display: none;
+  }
+}
+
+header.header .upper .login-container {
+  display: flex;
+  align-items: center;
+}
+
+header.header .upper .login-container > * {
+  margin: 0 0.25rem;
+}
+
+@media (max-width: 991.98px) {
+  header.header .upper .login-container > * {
+    margin: 0 0.5rem;
+  }
+}
+
+header.header .upper .login-container span {
+  color: #cbcbcb;
+}
+
+@media (max-width: 991.98px) {
+  header.header .upper .login-container span {
+    display: none;
+  }
 }
 
 header.header .upper .navbar-toggler {
@@ -10785,7 +10828,12 @@ header.header .search-bar .search-icon i {
 header.header .search-bar .dropdown-menu {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  top: -3px !important;
+}
+
+@media (min-width: 992px) {
+  header.header .search-bar .dropdown-menu {
+    top: -3px !important;
+  }
 }
 
 header.header .search-bar #searchbar {
