@@ -3,7 +3,7 @@
     max-width: 768px;
     margin: auto;
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 
     h1 {
         font-family: $font-family-serif;
@@ -11,13 +11,13 @@
         color: $dark-purple;
         font-size: 3rem;
         margin-top: 4rem;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
     }
 
     p {
         color: $light-gray;
         font-size: 1.25rem;
-        margin: 2rem 0;
+        margin: 0 0 2rem;
     }
 
     .display-image {

@@ -6397,7 +6397,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".free-trial-app[data-v-8034bbbc] {\n  max-width: 400px;\n  margin: auto;\n  box-shadow: -2px -2px 10px #777;\n  border-radius: 5px;\n  padding: 2rem 3rem 1rem;\n  background-color: white;\n}", ""]);
+exports.push([module.i, ".free-trial-app[data-v-8034bbbc] {\n  max-width: 400px;\n  margin: auto;\n  box-shadow: 0px 10px 10px rgba(191, 191, 191, 0.3);\n  border-radius: 15px;\n  padding: 2rem 3rem 1rem;\n  background-color: white;\n}", ""]);
 
 // exports
 
@@ -38001,7 +38001,7 @@ var render = function() {
       ],
       staticClass: "form-control",
       class: { error: _vm.error },
-      attrs: { type: "text", placeholder: "Enter Your Email Address" },
+      attrs: { type: "text", placeholder: "Enter your Email Address" },
       domProps: { value: _vm.emailValue },
       on: {
         input: function($event) {

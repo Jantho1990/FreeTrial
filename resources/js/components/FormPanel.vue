@@ -9,7 +9,7 @@
         <input
             type="text"
             class="form-control"
-            placeholder="Enter Your Email Address"
+            placeholder="Enter your Email Address"
             v-model="emailValue"
             :class="{ error: error }"
         >

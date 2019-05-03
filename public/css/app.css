@@ -10756,7 +10756,7 @@ a:hover {
   max-width: 768px;
   margin: auto;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .free-trial h1 {
@@ -10765,13 +10765,13 @@ a:hover {
   color: #2a0054;
   font-size: 3rem;
   margin-top: 4rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .free-trial p {
   color: #737984;
   font-size: 1.25rem;
-  margin: 2rem 0;
+  margin: 0 0 2rem;
 }
 
 .free-trial .display-image {

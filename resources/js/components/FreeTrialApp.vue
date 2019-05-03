@@ -62,8 +62,8 @@ export default {
 .free-trial-app {
     max-width: 400px;
     margin: auto;
-    box-shadow: -2px -2px 10px #777;
-    border-radius: 5px;
+    box-shadow: 0px 10px 10px hsla(0, 0%, 75%, 0.3);
+    border-radius: 15px;
     padding: 2rem 3rem 1rem;
     background-color: hsl(0, 0%, 100%);
 }
