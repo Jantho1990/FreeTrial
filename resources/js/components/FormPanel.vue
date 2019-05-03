@@ -71,8 +71,8 @@ export default {
         }
     }
 
-    input[type="text"] {
-        padding: 1.25rem 0.75rem;
+    input[type="email"] {
+        padding: 1.5rem 0.75rem;
         
         &.error {
             border: 1px solid hsl(0, 50%, 50%);
