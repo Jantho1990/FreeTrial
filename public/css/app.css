@@ -10698,7 +10698,7 @@ header.header .upper {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  margin: 0.5em 0;
+  margin: 1.5em 0;
 }
 
 header.header .upper > * {
@@ -10886,6 +10886,7 @@ header.header nav > ul {
 @media (max-width: 991.98px) {
   header.header nav > ul {
     flex-direction: column;
+    margin-bottom: 1rem;
   }
 }
 

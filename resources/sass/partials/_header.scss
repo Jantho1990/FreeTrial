@@ -19,7 +19,7 @@ header.header {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        margin: 0.5em 0;
+        margin: 1.5em 0;
 
         > * {
             margin: 0 1rem;
@@ -167,6 +167,7 @@ header.header {
 
         @include media-breakpoint-down(md) {
             flex-direction: column;
+            margin-bottom: 1rem;
         }
 
         > li {
