@@ -9,11 +9,11 @@ class AppExtensions extends AbstractExtension
     public function getFunctions()
     {
         return [
-            new TwigFunction('str_replace', [$this, 'str_replace']),
+            new TwigFunction('str_replace', [$this, 'stringReplace']),
         ];
     }
 
-    public function str_replace(string $target, string $replacement, string $source)
+    public function stringReplace(string $target, string $replacement, string $source)
     {
         return str_replace($target, $replacement, $source);
     }
