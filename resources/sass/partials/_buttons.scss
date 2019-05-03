@@ -1,5 +1,9 @@
 .btn {
-    background-color: hsl(353.1, 87%, 66.9%);
-    color: hsl(0, 0%, 100%);
+    background-color: $pink;
+    color: $white;
     font-weight: bold;
+    &:hover {
+        background-color: $dark-pink;
+        color: $white;
+    }
 }

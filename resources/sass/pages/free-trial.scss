@@ -2,14 +2,14 @@
     text-align: center;
 
     h1 {
-        font-family: "Times New Roman", serif;
+        font-family: $font-family-serif;
         font-weight: bold;
-        color: hsl(270, 100%, 16.5%);
+        color: $dark-purple;
         font-size: 3rem;
     }
 
     p {
-        color: hsl(221.3, 6.6%, 47.8%);
+        color: $light-gray;
         font-size: 1.25rem;
     }
 }

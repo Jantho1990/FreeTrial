@@ -2,19 +2,15 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Arial', sans-serif;
+$font-family-serif: 'Times New Roman', serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $light-gray: hsl(218.8, 6.9%, 48.4%);
 
 // Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$purple: hsl(257.5, 50.6%, 49.2%);
+$dark-purple: hsl(270, 100%, 16.5%);
+$pink: hsl(353.1, 87%, 66.9%);
+$dark-pink: hsl(353.1, 67%, 60.9%);
+$white: hsl(0, 0%, 100%);

@@ -7,7 +7,7 @@ header.header {
         }
     }
     .btn {
-        color: hsl(0, 0%, 100%);
+        color: $white;
     }
     .header-content {
         display: flex;
@@ -33,7 +33,7 @@ header.header {
         align-items: center;
         justify-content: flex-end;
         .btn {
-            background-color: hsl(0, 0%, 100%);
+            background-color: $white;
         }
     }
 
