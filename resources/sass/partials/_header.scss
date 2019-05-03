@@ -6,9 +6,6 @@ header.header {
             text-decoration: underline;
         }
     }
-    .btn {
-        color: $white;
-    }
     .header-content {
         display: flex;
         flex-direction: column;
@@ -16,7 +13,7 @@ header.header {
         justify-content: space-between;
         padding: 0 3rem;
     }
-
+    
     .upper {
         display: flex;
         flex-direction: row;
@@ -25,8 +22,11 @@ header.header {
         > * {
             margin: 0 1rem;
         }
+        .btn {
+            color: $white;
+        }
     }
-
+    
     .lower, nav > ul {
         display: flex;
         flex-direction: row;
@@ -34,6 +34,10 @@ header.header {
         justify-content: flex-end;
         .btn {
             background-color: $white;
+            color: $light-gray;
+            i {
+                color: $pink;
+            }
         }
     }
 

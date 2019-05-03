@@ -10685,10 +10685,6 @@ header.header a:not(.btn):hover {
   text-decoration: underline;
 }
 
-header.header .btn {
-  color: white;
-}
-
 header.header .header-content {
   display: flex;
   flex-direction: column;
@@ -10708,6 +10704,10 @@ header.header .upper > * {
   margin: 0 1rem;
 }
 
+header.header .upper .btn {
+  color: white;
+}
+
 header.header .lower,
 header.header nav > ul {
   display: flex;
@@ -10719,6 +10719,12 @@ header.header nav > ul {
 header.header .lower .btn,
 header.header nav > ul .btn {
   background-color: white;
+  color: #737984;
+}
+
+header.header .lower .btn i,
+header.header nav > ul .btn i {
+  color: #f46172;
 }
 
 header.header .lower .dropdown-toggle::after {
