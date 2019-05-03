@@ -64,7 +64,7 @@ export default {
     margin: auto;
     box-shadow: 0px 10px 10px hsla(0, 0%, 75%, 0.3);
     border-radius: 15px;
-    padding: 2rem 3rem 1rem;
+    padding: 2rem 3rem;
     background-color: hsl(0, 0%, 100%);
     line-height: 1.5;
 }

@@ -6360,7 +6360,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".existing-user-panel p[data-v-1a6fdc5a] {\n  color: #383c40;\n}\n.existing-user-panel .btn[data-v-1a6fdc5a] {\n  width: 100%;\n  text-transform: uppercase;\n}", ""]);
+exports.push([module.i, ".existing-user-panel p[data-v-1a6fdc5a] {\n  color: #383c40;\n  padding: 0 0.6rem;\n}\n.existing-user-panel .btn[data-v-1a6fdc5a] {\n  width: 100%;\n  text-transform: uppercase;\n  padding: 0.75rem 0.75rem;\n}", ""]);
 
 // exports
 
@@ -6379,7 +6379,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel h2[data-v-07af7c76] {\n  font-size: 1.25rem;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style: none;\n  text-align: left;\n  padding-left: 1.5rem;\n  margin: 1.5rem 0;\n}\n.form-panel .benefits li[data-v-07af7c76] {\n  display: flex;\n  align-items: center;\n  margin: 0.5rem 0;\n  font-size: 1rem;\n}\n.form-panel .benefits li[data-v-07af7c76]::before {\n  content: url(\"/img/checkmark-lined.svg\");\n  margin-right: 0.5rem;\n}\n.form-panel input[type=email][data-v-07af7c76] {\n  padding: 1.5rem 0.75rem;\n}\n.form-panel input[type=email].error[data-v-07af7c76] {\n  border: 1px solid #bf4040;\n  box-shadow: 0px 0px 5px #bf4040;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.5rem 0.75rem;\n  margin-top: 1rem;\n  cursor: pointer;\n}\n.form-panel .error-msg[data-v-07af7c76] {\n  font-size: 0.6rem;\n  color: #bf4040;\n  text-align: left;\n  margin-top: 0.5rem;\n  margin-bottom: 0;\n  padding-left: 0.5rem;\n}\n.form-panel .disclaimer[data-v-07af7c76] {\n  font-size: 0.6rem;\n  margin-top: 1rem;\n}", ""]);
+exports.push([module.i, ".form-panel[data-v-07af7c76] {\n  color: #383c40;\n}\n.form-panel h2[data-v-07af7c76] {\n  font-size: 1.25rem;\n}\n.form-panel .benefits[data-v-07af7c76] {\n  list-style: none;\n  text-align: left;\n  padding-left: 1.5rem;\n  margin: 1.5rem 0;\n}\n.form-panel .benefits li[data-v-07af7c76] {\n  display: flex;\n  align-items: center;\n  margin: 0.5rem 0;\n  font-size: 1rem;\n}\n.form-panel .benefits li[data-v-07af7c76]::before {\n  content: url(\"/img/checkmark-lined.svg\");\n  margin-right: 0.5rem;\n}\n.form-panel input[type=email][data-v-07af7c76] {\n  padding: 1.5rem 0.75rem;\n}\n.form-panel input[type=email].error[data-v-07af7c76] {\n  border: 1px solid #bf4040;\n  box-shadow: 0px 0px 5px #bf4040;\n}\n.form-panel .btn[data-v-07af7c76] {\n  width: 100%;\n  text-transform: uppercase;\n  font-weight: bold;\n  padding: 0.75rem 0.75rem;\n  margin-top: 1rem;\n  cursor: pointer;\n}\n.form-panel .error-msg[data-v-07af7c76] {\n  font-size: 0.6rem;\n  color: #bf4040;\n  text-align: left;\n  margin-top: 0.5rem;\n  margin-bottom: 0;\n  padding-left: 0.5rem;\n}\n.form-panel .disclaimer[data-v-07af7c76] {\n  font-size: 0.6rem;\n  margin-top: 1rem;\n  margin-bottom: 0;\n}", ""]);
 
 // exports
 
@@ -6398,7 +6398,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".free-trial-app[data-v-8034bbbc] {\n  max-width: 400px;\n  margin: auto;\n  box-shadow: 0px 10px 10px rgba(191, 191, 191, 0.3);\n  border-radius: 15px;\n  padding: 2rem 3rem 1rem;\n  background-color: white;\n  line-height: 1.5;\n}", ""]);
+exports.push([module.i, ".free-trial-app[data-v-8034bbbc] {\n  max-width: 400px;\n  margin: auto;\n  box-shadow: 0px 10px 10px rgba(191, 191, 191, 0.3);\n  border-radius: 15px;\n  padding: 2rem 3rem;\n  background-color: white;\n  line-height: 1.5;\n}", ""]);
 
 // exports
 

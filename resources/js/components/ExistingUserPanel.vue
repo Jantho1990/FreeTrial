@@ -15,11 +15,13 @@ export default {
 .existing-user-panel {
     p {
         color: hsl(210, 6.7%, 23.5%);
+        padding: 0 0.6rem;
     }
 
     .btn {
         width: 100%;
         text-transform: uppercase;
+        padding: 0.75rem 0.75rem;
     }
 }
 </style>

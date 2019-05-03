@@ -84,7 +84,7 @@ export default {
         width: 100%;
         text-transform: uppercase;
         font-weight: bold;
-        padding: 0.5rem 0.75rem;
+        padding: 0.75rem 0.75rem;
         margin-top: 1rem;
         cursor: pointer;
     }
@@ -101,6 +101,7 @@ export default {
     .disclaimer {
         font-size: 0.6rem;
         margin-top: 1rem;
+        margin-bottom: 0;
     }
 }
 </style>
