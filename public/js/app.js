@@ -6397,7 +6397,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".free-trial-app[data-v-8034bbbc] {\n  max-width: 400px;\n  margin: auto;\n  box-shadow: -2px -2px 10px #777;\n  border-radius: 5px;\n  padding: 2rem 3rem 1rem;\n}", ""]);
+exports.push([module.i, ".free-trial-app[data-v-8034bbbc] {\n  max-width: 400px;\n  margin: auto;\n  box-shadow: -2px -2px 10px #777;\n  border-radius: 5px;\n  padding: 2rem 3rem 1rem;\n  background-color: white;\n}", ""]);
 
 // exports
 
