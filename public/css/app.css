@@ -10714,7 +10714,7 @@ header.header .upper .navbar-toggler {
   margin: 0 auto 0 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header.header .upper .navbar-toggler {
     display: none;
   }
@@ -10744,9 +10744,9 @@ header.header nav > ul .btn i {
   color: #f46172;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   header.header .lower {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
