@@ -64,6 +64,6 @@ export default {
     margin: auto;
     box-shadow: -2px -2px 10px #777;
     border-radius: 5px;
-    padding: 3rem;
+    padding: 2rem 3rem 1rem;
 }
 </style>

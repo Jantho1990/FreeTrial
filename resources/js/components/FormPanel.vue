@@ -47,8 +47,23 @@ export default {
 .form-panel {
     color: hsl(210, 6.7%, 23.5%);
     
+    h2 {
+        font-size: 1.25rem;
+    }
+
     .benefits {
-        list-style-image: url('/img/checkmark-lined.svg');
+        list-style: none;
+        text-align: left;
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+        li {
+            display: flex;
+            align-items: center;
+            &::before {
+                content: url('/img/checkmark-lined.svg');
+                margin-right: 0.5rem;
+            }
+        }
     }
 
     input[type="text"] {
