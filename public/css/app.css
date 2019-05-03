@@ -10698,6 +10698,7 @@ header.header .upper {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  margin: 0.5em 0;
 }
 
 header.header .upper > * {
@@ -10706,6 +10707,21 @@ header.header .upper > * {
 
 header.header .upper .btn {
   color: white;
+}
+
+header.header .upper .navbar-toggler {
+  border: 1px solid #cbcbcb;
+  margin: 0 auto 0 0;
+}
+
+@media (min-width: 992px) {
+  header.header .upper .navbar-toggler {
+    display: none;
+  }
+}
+
+header.header .upper .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 header.header .lower,
@@ -10726,6 +10742,12 @@ header.header nav > ul .btn {
 header.header .lower .btn i,
 header.header nav > ul .btn i {
   color: #f46172;
+}
+
+@media (max-width: 1199.98px) {
+  header.header .lower {
+    flex-direction: column;
+  }
 }
 
 header.header .lower .dropdown-toggle::after {
@@ -10811,6 +10833,12 @@ header.header nav > ul {
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 991.98px) {
+  header.header nav > ul {
+    flex-direction: column;
+  }
 }
 
 header.header nav > ul > li {

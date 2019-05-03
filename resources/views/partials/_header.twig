@@ -1,12 +1,15 @@
 <header class="header">
-    <div class="header-content">
+    <div class="header-content navbar">
         <div class="upper">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTarget" aria-controls="lower-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <a href="#">Pricing</a>
             <a href="#">Sign In</a>
             <span>or</span>
             <a href="#" class="btn">Join Now</a>
         </div>
-        <div class="lower">
+        <div id="lower-nav" class="lower">
             <div class="search-bar input-group">
                 <div class="search-filter input-group-prepend">
                     <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <i class="fas fa-chevron-down"></i></button>
@@ -23,8 +26,8 @@
                 </div>
                 <input type="text" class="form-control" name="searchbar" id="searchbar" placeholder="Search Creative Market Pro">
             </div>
-            <nav>
-                <ul>
+            <nav class="navbar-collapse collapse" id="navTarget">
+                <ul class="navbar-nav">
                     <li>
                         <a href="#">Graphics</a>
                     </li>
