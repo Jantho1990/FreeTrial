@@ -56,9 +56,11 @@ export default {
         text-align: left;
         padding-left: 1.5rem;
         margin: 1.5rem 0;
+
         li {
             display: flex;
             align-items: center;
+            
             &::before {
                 content: url('/img/checkmark-lined.svg');
                 margin-right: 0.5rem;
