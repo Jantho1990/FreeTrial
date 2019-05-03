@@ -1,3 +1,9 @@
 body {
     font-family: "Arial", sans-serif;
 }
+
+a {
+    &:link, &:active, &:hover {
+        text-decoration: none;
+    }
+}

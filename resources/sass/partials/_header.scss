@@ -1,7 +1,13 @@
 header.header {
-    border-top: 10px solid purple;
+    border-top: 10px solid hsl(257.5, 50.6%, 49.2%);
     a {
         color: $light-gray;
+        &:not(.btn):hover {
+            text-decoration: underline;
+        }
+    }
+    .btn {
+        color: hsl(0, 0%, 100%);
     }
     .header-content {
         display: flex;
@@ -18,10 +24,6 @@ header.header {
         justify-content: flex-end;
         > * {
             margin: 0 1rem;
-        }
-        .btn {
-            background-color: pink;
-            color: white;
         }
     }
 
