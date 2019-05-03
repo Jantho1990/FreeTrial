@@ -1806,6 +1806,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'FormPanel',
   data: function data() {
@@ -37985,54 +37986,62 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "form-panel" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _vm._m(1),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.emailValue,
-          expression: "emailValue"
-        }
-      ],
-      staticClass: "form-control",
-      class: { error: _vm.error },
-      attrs: { type: "text", placeholder: "Enter your Email Address" },
-      domProps: { value: _vm.emailValue },
-      on: {
-        input: function($event) {
-          if ($event.target.composing) {
-            return
+  return _c(
+    "div",
+    { staticClass: "form-panel", attrs: { dusk: "FormPanel" } },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.emailValue,
+            expression: "emailValue"
           }
-          _vm.emailValue = $event.target.value
+        ],
+        staticClass: "form-control",
+        class: { error: _vm.error },
+        attrs: {
+          type: "email",
+          name: "email",
+          placeholder: "Enter your Email Address"
+        },
+        domProps: { value: _vm.emailValue },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.emailValue = $event.target.value
+          }
         }
-      }
-    }),
-    _vm._v(" "),
-    _vm.error
-      ? _c("p", { staticClass: "error-msg" }, [
-          _vm._v(
-            "There was an error with your submission. Please verify that you typed in your email address correctly."
-          )
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c(
-      "button",
-      { staticClass: "btn", on: { click: _vm.sendVerificationRequest } },
-      [_vm._v("Start Your Free Trial")]
-    ),
-    _vm._v(" "),
-    _c("p", { staticClass: "disclaimer" }, [
-      _vm._v(
-        "The free trial is for new members only. All assets downloaded during the free trial period are covered by a basic license."
-      )
-    ])
-  ])
+      }),
+      _vm._v(" "),
+      _vm.error
+        ? _c("p", { staticClass: "error-msg" }, [
+            _vm._v(
+              "There was an error with your submission. Please verify that you typed in your email address correctly."
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn", on: { click: _vm.sendVerificationRequest } },
+        [_vm._v("Start Your Free Trial")]
+      ),
+      _vm._v(" "),
+      _c("p", { staticClass: "disclaimer" }, [
+        _vm._v(
+          "The free trial is for new members only. All assets downloaded during the free trial period are covered by a basic license."
+        )
+      ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {

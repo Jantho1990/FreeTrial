@@ -1,5 +1,5 @@
 <template>
-    <div class="form-panel">
+    <div class="form-panel" dusk="FormPanel">
         <h2>Get <strong>3 free downloads</strong> when you start your free trial today.</h2>
         <ul class="benefits">
             <li>Get access to our full Pro catalog</li>
@@ -7,7 +7,8 @@
             <li>7 days free</li>
         </ul>
         <input
-            type="text"
+            type="email"
+            name="email"
             class="form-control"
             placeholder="Enter your Email Address"
             v-model="emailValue"
