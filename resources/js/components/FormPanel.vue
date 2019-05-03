@@ -94,6 +94,7 @@ export default {
         color: hsl(0, 50%, 50%);
         text-align: left;
         margin-top: 0.5rem;
+        margin-bottom: 0;
         padding-left: 0.5rem;
     }
 
