@@ -25,6 +25,8 @@ There are two routes for this application:
 - `free-trial`, the front-facing landing page.
 - `api/free-trial-submit`, an API endpoint for verifying whether emails submitted from the Free Trial landing page are associated with existing users.
 
+The API route is behind throttling middleware intended to prevent somebody/somebot from flooding the endpoint with requests; it also makes it difficult for someone to try to use the endpoint to "scrape" existing email addresses by checking for negatory return values (aka the email exists).
+
 ## Database Schema
 The default Laravel user migration was used to generate the schema.
 - id: bigInt
