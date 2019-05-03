@@ -16,7 +16,7 @@ This project was built using Laravel Homestead to stage the environment. If you 
 
 ## Frontend
 
-The frontend is responsively designed, and should look good for both desktop and mobile sizes. Twig was chosen instead of Blade for the templating engine, and Vue was chosen as the frontend framework. Bootstrap is also used in a supportive role, particularly on the mobile nav dropdown.
+The frontend is responsively designed, and should look good for both desktop and mobile sizes. Twig was chosen instead of Blade for the templating engine, and Vue was chosen as the frontend framework. Bootstrap is also used in a supportive role, particularly on the mobile nav dropdown. Styles are compiled using SASS, for both the regular stylesheets and Vue's component styles.
 
 ## Backend
 
