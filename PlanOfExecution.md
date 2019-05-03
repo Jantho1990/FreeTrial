@@ -39,7 +39,7 @@ Two routes will be used:
 - `free-trial`, which returns the `free-trial` Blade view containing our landing page.
   - The url will be `/free-trial`.
 - `free-trial-user-exists`, an AJAX endpoint which will return whether the submitted email is associated with a user in our database.
-  - The url will be `/free-trial-submit`.
+  - The url will be `/api/free-trial-submit`.
     - We will not use `/free-trial-user-exists`, as that would simply make it immediately obvious to a potential bad actor what this endpoint is doing.
   - The response from this endpoint will be a simple boolean: `false` if the user doesn't exist, `true` if they do.
   - The endpoint will also be responsible for applying rate throttling measures to prevent bots from flooding submissions to our endpoint. This both reduces spam and prevents scraping user emails by detecting negatory return values.
@@ -70,12 +70,13 @@ The `README` file will contain an outline of the database schema.
 
 As mentioned previously, we will be using Twig templates to construct our page. The page design for desktop will match the provided mock design. We will use this as the base for styling the page responsively so that it will be presentable at tablet and mobile sizes.
 
-SASS will be used to style the page. No other styling frameworks, such as Bootstrap or Bulma, will be used.
+SASS will be used to style the page. To speed up development of the prototype, Bootstrap will also be used for default styling needs.
 
 The form itself will be built as a Vue application consisting of three components:
 
 - `FreeTrialApp`, the main application component, which will contain two primary components: `FormPanel` and `ExistingUserPanel`.
   - This will also contain the logic for submitting the AJAX request, triggered by a child event (see `FormPanel`).
+  - If the user submits an email that Laravel's validation considers invalid, the panel will communicate this to `FormPanel` so it can display a helpful error message.
   - In the event that the form submission returns `false` (the user does not exist), `FreeTrialApp` will initiate URL navigation to the following URL: https://pro.creativemarket.com/sign-up
 - `FormPanel` will contain our marketing copy, as shown in the mock, and an email submission form. When the form is submitted, the default submission will be prevented, and the component will emit a `form-submitted` event that the `FreeTrialApp` component is listening for.
 - `ExistingUserPanel` is what `FreeTrialApp` will show if the AJAX request returns `true` (the user does exist). It simply consists of some text and a button link to our catalog.
