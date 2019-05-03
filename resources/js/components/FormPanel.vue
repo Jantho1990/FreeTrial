@@ -60,6 +60,8 @@ export default {
         li {
             display: flex;
             align-items: center;
+            margin: 0.5rem 0;
+            font-size: 1rem;
             
             &::before {
                 content: url('/img/checkmark-lined.svg');

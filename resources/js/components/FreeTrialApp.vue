@@ -66,5 +66,6 @@ export default {
     border-radius: 15px;
     padding: 2rem 3rem 1rem;
     background-color: hsl(0, 0%, 100%);
+    line-height: 1.5;
 }
 </style>
