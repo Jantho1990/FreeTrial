@@ -83,6 +83,7 @@ export default {
         font-weight: bold;
         padding: 0.5rem 0.75rem;
         margin-top: 1rem;
+        cursor: pointer;
     }
 
     .error-msg {

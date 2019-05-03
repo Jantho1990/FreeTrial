@@ -32,6 +32,8 @@ header.header {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
+        font-weight: bold;
+
         .btn {
             background-color: $white;
             color: $light-gray;
@@ -45,10 +47,67 @@ header.header {
         .dropdown-toggle::after {
             display: none;
         }
+
+        .input-group-text {
+            background-color: $white;
+            border: none;
+        }
+    }
+
+    .search-bar {
+        border-radius: 3px;
+
+        .btn {
+            border: 1px solid $lighter-gray;
+            padding: 1rem 1.5rem;
+            
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .search-icon {
+            border-top: 1px solid $lighter-gray;
+            border-bottom: 1px solid $lighter-gray;
+            
+            i {
+                background-color: $white;
+                color: $lighter-gray;
+            }
+        }
+
+        .dropdown-menu {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            top: -3px !important; // !important is to overwrite Bootstap's element setting.
+        }
+
+        #searchbar {
+            border: 1px solid $lighter-gray;
+            border-left: none;
+            padding: 1rem 0;
+            height: 100%;
+            font-size: 0.95rem;
+            box-shadow: none;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &::placeholder {
+                font-weight: bold;
+                color: $lighter-gray;
+            }
+        }
     }
 
     nav > ul {
         list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
         > li {
             margin: 0 1rem;
         }

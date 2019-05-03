@@ -2,8 +2,10 @@
     background-color: $pink;
     color: $white;
     font-weight: bold;
+
     &:hover {
         background-color: $dark-pink;
         color: $white;
     }
+
 }
